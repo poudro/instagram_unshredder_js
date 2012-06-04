@@ -58,13 +58,10 @@ if ($oW%$numShreds != 0)
 $shredWidth = intval($oW/$numShreds);
 $outim = imagecreatetruecolor($oW, $oH);
 
-  $shOrder = array();
-  for ($i=0; $i<$numShreds; ++$i)
-    $shOrder[] = $i;
-if (!isset($_GET['as']) || isset($_GET['as']) && $_GET['as'] != "t")
-{
-  shuffle($shOrder);
-}
+$shOrder = array();
+for ($i=0; $i<$numShreds; ++$i)
+  $shOrder[] = $i;
+shuffle($shOrder);
 
 for ($i=0; $i<$numShreds; ++$i)
 {
